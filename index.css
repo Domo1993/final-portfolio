@@ -75,7 +75,8 @@ p>#word {
   font-size: 20px;
 }
 
-#typeEffect {
+.typingSpace {
+  width: 70%;
   margin-left: 30%;
   margin-right: auto;
 }
@@ -91,6 +92,28 @@ p>#word {
 #name {
   font-family: 'Fredericka the Great', cursive;
 	padding-bottom: 60px;
+}
+
+/* My profile images */
+.profilePicSection{
+  margin-left: -10%;
+}
+
+.profileContainer{
+  max-width: 60%;
+}
+
+.img-profile {
+  max-width: 180%;
+  max-height: 200%;
+  margin-top: 5%;
+  transform: rotate(90deg);
+  box-shadow: 5px 5px 5px rgb(37, 37, 37);
+}
+
+
+.profile-img-div {
+  padding-top: 10px;
 }
 
 /* arrow animation */
@@ -140,44 +163,6 @@ p>#word {
 .arrows path.a3 {	
 	animation-delay:0s;
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
-
-/* My profile images */
-.w3-image {
-  transform: rotate(90deg);
-  box-shadow: 5px 5px 5px rgb(37, 37, 37);
-}
-
-#image-div-1 {
-  margin-left: 10%;
-}
-
-#image-div-2 {
-  margin-left: -10%;
-}
-
-#image-div-3 {
-  margin-left: -10%;
-}
-
-#image1 {
-  float: right;
-  max-width: 100%;
-}
-
-#image2 {
-  float: right;
-  max-width: 100%;
-  
-}
-
-#image3 {
-  float: right;
-  max-width: 100%;
-}
-
-.profile-img-div {
-  padding-top: 20px;
 }
 
 /* About Section */

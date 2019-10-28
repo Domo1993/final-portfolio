@@ -26,8 +26,9 @@
   #main {margin-left: 120px;}
   /* Remove margins from "page content" on small screens */
   @media only screen and (max-width: 600px) {
-    #main {margin-left: 0} .profile-img-div{max-width: 100%;display: inline-block;} 
-    #image1 {width: 100px;height: auto;margin-right: 80%;} #image2 {width: 30%;height: auto;margin-right: 60%;} #image3 {max-width:100%;width: 30%;height: auto;}}
+    #main {margin-left: 0} .profile-pics {max-width: 200%;} .profileContainer{max-width: 80%}
+    #word{font-size: 15px;} #blink{font-size: 15px;} .typingSpace {margin-left: 20%;}
+  }
 </style>
 
 <body class="w3-black">
@@ -81,31 +82,39 @@
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
 
       <!-- Type effect section -->
+      <div class="typingSpace">
       <div class="flex" id="typeEffect">
         <p class="header-sub-title" id="word"></p><p class="header-sub-title blink">|</p>
       </div>
-      
-      <h1 class="w3-jumbo" id="name"><span class="w3-hide-small">I'm</span> Dominic Windvogel.<hr style="width:700px;margin-left:auto;margin-right: auto;" class="w3-opacity"></h1>
-      
-      <div class="profile-img-div">
-      <div class="w3-third w3-section" id="image-div-1">
-        <img src="dominic1.jpg" alt="Dominic Windvogel" class="w3-image" id="image1">
       </div>
-      <div class="w3-third w3-section" id="image-div-2">
-        <img src="dominic2.jpg" alt="Dominic Windvogel" class="w3-image" id="image2">
+      
+      <h1 class="w3-jumbo" id="name"><span class="w3-hide-small">I'm</span> Dominic Windvogel.<hr style="width:60%;margin-left:auto;margin-right: auto;" class="w3-opacity"></h1>
+      
+      <div class="profilePicSection">
+        <div class="container profileContainer">
+      <div class="row profile-img-div">
+      <div class="col profile-pics" id="image-div-1">
+        <img src="dominic1.jpg" alt="Dominic Windvogel" class="img-profile" id="image1">
       </div>
-      <div class="w3-third w3-section" id="image-div-3">
-        <img src="dominic3.jpg" alt="Dominic Windvogel" class="w3-image" id="image3">
+      <div class="col profile-pics" id="image-div-2">
+        <img src="dominic2.jpg" alt="Dominic Windvogel" class="img-profile" id="image2">
+      </div>
+      <div class="col profile-pics" id="image-div-3">
+        <img src="dominic3.jpg" alt="Dominic Windvogel" class="img-profile" id="image3">
       </div>
     </div>
-    <a href="#about">
-      <svg class="arrows">
-        <path class="a1" d="M0 0 L30 32 L60 0"></path>
-        <path class="a2" d="M0 20 L30 52 L60 20"></path>
-        <path class="a3" d="M0 40 L30 72 L60 40"></path>
-      </svg>
-    </a>  
-
+    </div>
+    </div>
+    <!-- down animated arrow -->
+    <div class="arrowDiv">
+        <a href="#about">
+            <svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+          </a>
+        </div>
 
     </header>
   </div>
