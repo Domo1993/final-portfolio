@@ -33,6 +33,53 @@ a:hover {
 
 
 /* Header section */
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+html, body {
+	background-color: #000;
+}
+a,#word {
+	color: #fff;
+	/* font-family: Roboto; */
+	text-decoration: none;
+}
+p>#word {
+	color: #fd084a;
+}
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+.flex {
+	display: flex;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.header-sub-title {
+  color: #fff;
+  font-family: "Courier";
+  font-size: 20px;
+}
+
+#typeEffect {
+  margin-left: 30%;
+  margin-right: auto;
+}
+
 #home {
   background-image: linear-gradient(#29323c,#485563);
   max-height: 1000px;
@@ -135,13 +182,16 @@ a:hover {
 
 /* About Section */
 
-
 #about{
   padding-top: 30px;
 }
 
 #resume {
   padding-top: 30px;
+}
+
+#aboutPara {
+  font-size: 150%;
 }
 
 /* Education and Experience */
@@ -154,8 +204,20 @@ a:hover {
 
 /* Interests */
 .interestPics {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
+}
+
+.interests {
+  /* background-color: rgba(255, 255, 255, 0.404); */
+  margin: 1%;
+  padding: 0.5%;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+}
+
+#languages {
+  text-align: center;
 }
 
 /* Rotating images */
@@ -196,52 +258,10 @@ a:hover {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-
-@import 'https://fonts.googleapis.com/css?family=Roboto';
-html, body {
-	background-color: #000;
-}
-a,#word {
-	color: #fff;
-	/* font-family: Roboto; */
-	text-decoration: none;
-}
-p>#word {
-	color: #fd084a;
-}
-.blink {
-  animation: blink 0.5s infinite;
-}
-@keyframes blink{
-  to { opacity: .0; }
-}
-.flex {
-	display: flex;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-.header-sub-title {
-  color: #fff;
-  font-family: "Courier";
-  font-size: 20px;
-}
-
-#typeEffect {
-  margin-left: 30%;
-  margin-right: auto;
+.rotate, .shake {
+  max-width: 10%;
+  height: auto;
+  padding: 0.4%;
 }
 
 /* Projects Section */
@@ -313,4 +333,8 @@ button:focus {
 /* Modal sections */
 .modal-title, .modal-body {
   color: #000;
+}
+
+.w3-input {
+  display: flexbox;
 }
