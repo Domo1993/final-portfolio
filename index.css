@@ -245,8 +245,13 @@ p>#word {
 }
 
 /* Projects Section */
+
 #myProjects {
   padding-top: 30px;
+}
+
+.projects {
+  text-align: center;
 }
 
 .hiddenPara {
@@ -276,9 +281,6 @@ p>#word {
   border: 1px solid black;
   
 }
-button:focus {
-  outline: none;
-}
 
 .btn-primary:hover {
   background-color: white;
@@ -305,7 +307,7 @@ button:focus {
 }
 
 .projects {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 /* Modal sections */
