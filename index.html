@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<title>Dominic Windvogel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- getbootstrap cdn -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Londrina+Sketch|Gayathri&display=swap">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body, h1,h2,h3,h4,h5,h6 {font-family: 'Gayathri', sans-serif;}
+  .w3-row-padding img {margin-bottom: 12px}
+  /* Set the width of the sidebar to 120px */
+  .w3-sidebar {width: 120px;background: #222;}
+  /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  #main {margin-left: 120px;}
+  /* Remove margins from "page content" on small screens */
+  @media only screen and (max-width: 600px) {
+    #main {margin-left: 0} .profile-img-div{max-width: 100%;display: inline-block;} 
+    #image1 {width: 100px;height: auto;margin-right: 80%;} #image2 {width: 30%;height: auto;margin-right: 60%;} #image3 {max-width:100%;width: 30%;height: auto;}}
+</style>
+
+<body class="w3-black">
+
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <a href="#" id="homePara" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+    <a href="#resume" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-graduation-cap w3-xxlarge"></i>
+      <p>RESUME</p>
+    </a>
+    <a href="#myProjects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-tasks w3-xxlarge"></i>
+      <p>PROJECTS</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  
+      <a href="cvDominic.docx" class="w3-bar-item w3-button w3-padding-large w3-hover-black" download>
+      <i class="fa fa-download w3-xxlarge"></i> 
+      <p>DOWNLOAD CV</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:16.66% !important">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button" style="width:16.66% !important">ABOUT</a>
+      <a href="#resume" class="w3-bar-item w3-button" style="width:16.66% !important">RESUME</a>
+      <a href="#myProjects" class="w3-bar-item w3-button" style="width:16.66% !important">PROJECTS</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:16.66% !important">CONTACT</a>
+      <a href="cvDominic.docx" class="w3-bar-item w3-button" style="width:16.66% !important">DOWNLOAD CV</a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <div id="headerDiv">
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+
+      <!-- Type effect section -->
+      <div class="flex" id="typeEffect">
+        <p class="header-sub-title" id="word"></p><p class="header-sub-title blink">|</p>
+      </div>
+      
+      <h1 class="w3-jumbo" id="name"><span class="w3-hide-small">I'm</span> Dominic Windvogel.<hr style="width:700px;margin-left:auto;margin-right: auto;" class="w3-opacity"></h1>
+      
+      <div class="profile-img-div">
+      <div class="w3-third w3-section" id="image-div-1">
+        <img src="dominic1.jpg" alt="Dominic Windvogel" class="w3-image" id="image1">
+      </div>
+      <div class="w3-third w3-section" id="image-div-2">
+        <img src="dominic2.jpg" alt="Dominic Windvogel" class="w3-image" id="image2">
+      </div>
+      <div class="w3-third w3-section" id="image-div-3">
+        <img src="dominic3.jpg" alt="Dominic Windvogel" class="w3-image" id="image3">
+      </div>
+    </div>
+      
+    </header>
+  </div>
+
+  <!-- About Section -->
+
+    <div id="aboutSection">
+    <h2 id="about" class="w3-text-light-grey">About</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p class="w3-text-light-grey">Dominic Windvogel is an innovator and problem solver. He is a perseverer and a resilient character who always wants to 
+      overcome any challenges thrown his way. He is down to earth and easy to to communicate with. He works well in a team and 
+      is able to take leadership roles when needed or called apon. He aspires to grow and learn wherever possible and sees a bright 
+      future in the field of computer programming.
+    </p>
+    <br>
+    <h3 class="w3-padding-24 w3-text-light-grey">Interests/Hobbies</h3>
+    <!-- <img src="./Images/coding.webp"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Coding</p>
+        </div>
+        <div class="col">
+          <p>Gaming - Console and pc games, chess, trivia.</p>
+        </div>
+        <div class="col">
+          <p>Sport - Soccer, Rugby, Cricket</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <p>Hiking - (I've been to many places all over the western cape)</p>
+        </div>
+        <div class="col-4">
+          <p>Empowering Youth - through tutoring, Church ministry, mentoring.</p>
+        </div>
+      </div>
+
+    </div>
+
+      </div> <!-- End of about section-->
+
+      <!-- Resume section -->
+    <h2 id="resume" class="w3-text-light-grey">Resume</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <div class="container-fluid">
+      
+      
+      <div class="row">
+        <div class=col>
+            <p class="w3-wide">Experience</p>
+          <div id="maths">
+              <h4>Mathematics Tutor (Grades 7 -12) - Private</h4>
+              <p>2012 - present</p>
+              <p> Duties: <br> 
+                •	Explaining and working through mathematical topics (mostly one on one)<br>
+                •	Providing resources when necassary (Methods, exercises, tests, solutions, etc.)</p>
+          </div>
+          <div id="ava">
+              <h4>AVA (Action Volunteers Africa)</h4>
+              <p>Academic tutor (Mathematics and English Focused) and Mentor</p>
+              <p>JAN 2018 - NOV 2018</p>
+              <p> Duties:<br> 
+                  •	Preparing sessions (Lessons, worksheets, ice breakers, setting up the classrooms/rooms, etc).<br>
+                  •	Working in a team of 6.<br>
+                  •	Mentoring and tutoring 30-40 learners on a daily basis.<br>
+                  •	Administration - Online attendance registers (MS excel,word),  photocopies, communicating with parents and teachers regularly.<br></p>
+          </div>
+
+        </div>
+        <div class="col">
+            <p class="w3-wide">Education</p>
+            <div id="livingstone">
+              <h4>Livingstone High School</h4>
+              <p>2007-2011</p>
+              <p> Mathematics; English; Afrikaans; Life Sciences; Physical Sciences; Accounting; Life Orientation; Mathematics: Probability,data handling and geometry</p>
+            </div>
+            
+            <div id="cput">
+                <h4>Cape Peninsula Univertsity of Technology</h4>
+                <p>2012-2013</p>
+                <p>Electrical Engineering</p>
+            </div>
+            
+            <div id="stellenbosch">
+                <h4>Stellenbosch University</h4>
+                <p>JAN 2018 - NOV 2018</p>
+                <p>Social Impact and Transformation - Leadership Development Programme</p>
+            </div>
+
+            <div id="uwc">
+                <h4>University of the Western Cape</h4>
+                <p>2014-2015</p>
+                <p>Bachelors of Education (Mathematics and Natural Sciences)</p>
+            </div>
+              
+            <div id="lifeChoices">
+                <h4>Co-Grammar in partnership with Life Choices</h4>
+                <p>APR 2019 - present</p>
+                <p>Python, HTML, CSS, Bootstrap, Javascript, Jquery, React JS, Node JS, Express.</p>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+ <!-- languages and libraries -->
+
+ <div class="container-fluid" id="photos">  
+    <h2 class="w3-text-light-grey">Skills </h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p class="w3-wide">Programming Languages & Libraries</p>
+
+    <div class="row">
+      <div class="col">
+        <img src="python.png" alt="Python" style="width:15%" class="rotate">
+        <img src="html5.png" alt="HTML5" style="width:15%" class="shake">
+        <img src="css-3.png" alt="CSS" style="width:15%" class="shake">
+        <img src="javascript.png" alt="Javascript" style="width:15%" class="shake">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <img src="node.png" alt="Node JS" style="width:15%" class="rotate">
+        <img src="react.png" alt="React JS" style="width:15%" class="rotate">
+        <img src="jquery.png" alt="jQuery" style="width:15%" class="rotate">
+        <img src="bootstrap-4.png" alt="bootstrap-4" style="width:15%" class="shake">
+      </div>
+    </div>
+  <!-- End of language and libraries -->
+</div>
+    <!-- End of resume section -->
+
+    <!-- My projects section -->
+<div class="container-fluid">
+    <h2 id="myProjects" class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="row">
+      <div class="col projects">
+
+      <div class="img-descrip">
+          <p class="hiddenPara">Media Application using the itunes API</p>
+          <img class="project-pics" src="./Images/itunes.png" alt="Itunes-app" style="width:300px;height:auto;box-shadow: 3px 3px 3px gray;">
+      </div>
+      
+      <br>
+          <!-- Description Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+      Description
+    </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Itunes Media App</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>- A full stack web application that interfaces with the iTunes Search API.</p>
+          <p>- The application allows the user to search for content within the iTunes Store and Apple Books Store. The user is able to 
+              create a list of ‘favourites’ by adding any searched items to the favourites list.</p>
+          <p>- This application was made using express js (Used for the backend of the app), react js (Used for the frontend of the app) and node js.</p>
+          <p>- Here is a link to the github repository:</p>
+          <a href="https://github.com/Domo1993/itunes-api.git" target="_blank" class="project-link">https://github.com/Domo1993/itunes-api.git</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- End of description modal -->
+        <a type="button" class="btn btn-primary2" href="http://dominic-itunes-app.herokuapp.com/" target="_blank">Check it out</a>
+      </div>
+
+
+      <div class="col">
+          <div class="img-descrip">
+              <p class="hiddenPara">Weather Application</p>
+              <img class="project-pics" src="weather.png" alt="Weather app" style="width:300px;height:auto;">
+          </div>
+          
+          <br> 
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
+              Description
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Weather application</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="color: black;">
+                    <p>-This simple weather application was created using React JS React app.</p>
+                    <p>-It displays the weather in a city depending on the user's inputted choice.</p>
+                    <p>-This app uses the OpenWeatherMap API for the weather data.</p> 
+                    <p>-Here is a link to the github repository:</p>
+                    <a href="https://github.com/Domo1993/weather-app" target="_blank" class="project-link">https://github.com/Domo1993/weather-app</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- End of description modal -->
+                <a type="button" class="btn btn-primary2" href="http://dominic-weather-app.herokuapp.com/" target="_blank">Check it out</a>
+      </div>
+
+      <div class="col">
+          <div class="img-descrip">
+              <p class="hiddenPara">A simple Calculator</p>
+              <img class="project-pics" src="./Images/simpleCalculator.png" alt="calculator" style="width:300px;height:auto;">
+          </div>
+          <br> 
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
+              Description
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">A simple Calculator</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>This simple calculator was made with html, css and javascript</p>
+                    <p>This calculator has the functionality similar to that of your pc or cellphone calculator</p>
+                    <p>-Here is a link to the github repository:</p>
+                    <a href="https://github.com/Domo1993/calculator" target="_blank" class="project-link">https://github.com/Domo1993/calculator</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- End of description modal -->
+                <a type="button" class="btn btn-primary2" href="https://domo1993.github.io/calculator/" target="_blank">Check it out</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+          <div class="img-descrip">
+              <p class="hiddenPara">Snake Game using React JS</p>
+              <img class="project-pics" src="snake-game.png" alt="Snake Game" style="width:300px;height:auto;">
+          </div>
+          
+          <br>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal4">
+              Description
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>This snake game was made using React JS.</p>
+                    <p>It uses states, props, maps and many other functions for the game's skeleton structure</p>
+                    <p>-Here is a link to the github repository:</p>
+                    <a href="https://github.com/Domo1993/snake-game" target="_blank" class="project-link">https://github.com/Domo1993/snake-game</a>
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- End of description modal -->
+            <a type="button" class="btn btn-primary2" href="http://dominic-snake-game.herokuapp.com/" target="_blank">Check it out</a>
+      </div>
+
+      <div class="col-4">
+          <div class="img-descrip">
+              <p class="hiddenPara">Adding, editing, and deleting projects from a database</p>
+              <img class="project-pics" src="webProjects.png" alt="Media Store" style="width:300px;height:auto;">
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal5">
+              Description
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>- This application allows a user to add, edit and delete projects</p>
+                    <p>- This app makes use of express (controlling the backend) and react (the frontend)</p>
+                    <p>-Here is a link to the github repository:</p>
+                    <a href="https://github.com/Domo1993/Web-Projects" target="_blank" class="project-link">https://github.com/Domo1993/Web-Projects</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- End of description modal -->
+          <a type="button" class="btn btn-primary2" href="https://dominic-webprojects.herokuapp.com/" target="_blank">Check it out
+          </a>
+      </div>
+
+    </div>
+    </div>
+
+<!-- Testimonials -->
+    <!-- <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+    
+    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p> -->
+  <!-- End About Section -->
+  <!-- </div> -->
+
+<!-- </div> End of backColour div -->
+<!-- End of projects section -->
+
+
+<!-- Contact Section -->
+<div class="backColour">
+  <div class="w3-padding-64 w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Cape Town, ZA</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 081 590 9439</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: dominicwindvogel@gmail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+</div> <!-- End of back colour div-->
+  
+    <!-- Footer -->
+  <footer class="w3-padding-64 w3-text-grey w3-xxxlarge">
+    <a class="link-icon" href="https://github.com/Domo1993" target="_blank"><i class="fa fa-github w3-hover-opacity fa-lg"></i></a>
+    <a class="link-icon" href="https://www.linkedin.com/in/dominic-windvogel-785675175" target="_blank"><i class="fa fa-linkedin w3-hover-opacity fa-lg"></i></a>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script src="index.js"> </script>
+</body>
+</html>
